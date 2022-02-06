@@ -89,6 +89,9 @@ START40:
         JNE START50
 
         INC SN
+        
+        CMP SN,COLS*ROWS
+        JAE START60
 
         CALL FOOD
 
@@ -96,7 +99,8 @@ START50:
 
         CMP QUIT,1
         JNE START10
-                
+
+START60:                
         MOV CX,0098H
         MOV DX,9680H
         CALL DELAY
