@@ -101,8 +101,8 @@ START50:
         JNE START10
 
 START60:                
-        MOV CX,0007H
-        MOV DX,0A120H
+        MOV CX,004CH
+        MOV DX,4B40H
         CALL DELAY
 
         CALL SHOWCURSOR
