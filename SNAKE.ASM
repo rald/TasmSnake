@@ -307,26 +307,22 @@ FOOD10:
         MOV SI,0
 FOOD20:
         MOV AX,SI
-        PUSH CX
-        MOV CL,2
-        MUL CL
-        POP CX
+        MOV BL,2
+        MUL BL
         LEA BX,SX
         ADD BX,AX
         MOV AX,FX
         CMP AX,WORD PTR [BX]
-        JNE FOOD40
+        JNE FOOD30
         
         MOV AX,SI
-        PUSH CX
-        MOV CL,2
-        MUL CL
-        POP CX
+        MOV BL,2
+        MUL BL
         LEA BX,SY
         ADD BX,AX
         MOV AX,FY
         CMP AX,WORD PTR [BX]
-        JNE FOOD40
+        JNE FOOD30
         
         INC FX
         CMP FX,COLS-1
@@ -336,7 +332,7 @@ FOOD20:
         CMP FY,ROWS-1
         JBE FOOD10
         MOV FY,0
-        JMP FOOD20
+        JMP FOOD10
 
 FOOD30:
         LOOP FOOD20
