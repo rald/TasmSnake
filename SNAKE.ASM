@@ -435,8 +435,6 @@ DRAWPOINT:
 
 
 FILLRECT:
-        MOV AX,GX0
-        MOV GX,AX
         MOV AX,GY0
         MOV GY,AX
         MOV CX,GH
